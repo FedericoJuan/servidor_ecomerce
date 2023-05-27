@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
+    "desarrollo": "nodemon index.js",
     "build-css": "node-sass sass/main.scss -o public/css",
     "watch-css": "node-sass sass/main.scss -w -o public/css"
   },
