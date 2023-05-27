@@ -1,0 +1,45 @@
+<%- include('partials/header.ejs') %>.
+<%- include('partials/navbar.ejs') %>
+
+<main class="about-us">
+
+    <header class="about-us__header">
+        <img class="about-us__header__image" src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="grupo de desarrolladore trabajando">
+        <div>
+          <h1 class="about-us__header__title">
+              Acerca de nosotros
+          </h1>
+          <p>
+              Soy Federico un desarrollador Freelancer en busca de poder avanzar en el mundo del desarrollo web.
+              Mi mayor aspiracion es poder trabajar en una multinacional o en mercado libre.
+          </p>
+        </div>
+    </header>
+    <hr class="about-us__separator">
+    <section class="about-us__container">
+    <h2 class="about-us__container__title">
+        Acerca de este proyecto
+    </h2>
+    <p>En este proyecto se pone en practica todo lo enseñado en clase e investicacion particular para presentar el mejor resultado posible utilizando las mejores practicas aprobadas por la w3.</p>
+
+    <article class="about-us__container__article">
+        <h3 class="about-us__container__article__title">Lenguajes utilizados</h3>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>SASS</li>
+        </ul>
+    </article>
+    <article>
+        <h3>Herramientas utilizadas</h3>
+        <p>Se utilizo vsCode como editor de texto y el plugin LiveServer para las pruebas</p>
+        <p>Para este proyecto se utilizo <strong>ANodeJs</strong> para poder instalar el compilador de sass el cual nos permite convertir codigo sass a css</p>
+        <p>tambien se utilizo el gestor de paquetes npm para descargar la dependencia necesaria <strong>node-sass</strong> y configurar los scripts de desarrollo y produccion</p>
+        <p>Finalmente para el control de versiones se uso git y github para almacenar el codigo en la nuve y Netlify para publicarlo de manera gratuita.</p>
+    </article>
+    
+    </section>
+</main>
+<%- include('partials/whatsapp_aside.ejs') %>
+<%- include('partials/scripts.ejs') %>
+<%- include('partials/footer.ejs') %>

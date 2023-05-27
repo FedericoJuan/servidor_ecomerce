@@ -1,0 +1,38 @@
+.data__table {
+    border-collapse: collapse;
+    width: 100%;
+    
+    th,td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    &-header {
+        background-color: $color-1;
+        font-weight: 700;
+    }
+    &-body {
+        font-weight: 400;
+        
+        &-row {
+            border: 1px solid $color-1;
+            
+            &-menu {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+
+                button,a {
+                    margin: 0 0.5rem;
+                    padding: 0.5rem;
+                    border: none;
+                    background-color: white;
+                    color: $color-2;
+                    font-size: 1rem;
+                    cursor: pointer;
+                }
+            }
+
+        }
+    }  
+}

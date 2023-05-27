@@ -1,0 +1,60 @@
+<%- include('partials/header.ejs') %>.
+<%- include('partials/navbar.ejs') %>
+
+<header class="contact__header">
+    <h1>Tienes dudas Contactanos!</h1>
+  </header>
+  <main class="contact__main">
+    <form class="contact__form" action="#" method="get">
+      <div class="contact__form-group">
+        <label class="contact__form_label">Nombre</label>
+        <input
+          class="contact__form_input"
+          type="text"
+          name="nombre"
+          placeholder="Federico "
+        />
+      </div>
+
+      <div class="contact__form-group">
+        <label class="contact__form_label">Email</label>
+        <input
+          class="contact__form_input"
+          type="email"
+          name="email"
+          placeholder="nombre@email.dom"
+        />
+      </div>
+
+      <div class="contact__form-group">
+        <textarea
+          class="contact__form_input"
+          name="mensaje"
+          cols="30"
+          rows="10"
+          required
+          minlength="10"
+          maxlength="200"
+          placeholder="Tu importante mensaje"
+        >
+        </textarea>
+      </div>
+
+      <input class="contact__form_submit" type="submit" value="Enviar" />
+    </form>
+
+    <div class="contact__maporuter">
+          <iframe 
+              class="contact__maprouter__frame"
+              src="https://maps.google.com/maps?q=New%20York&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" 
+              id="gmap_canvas" 
+              frameborder="0" 
+              scrolling="no" >
+          </iframe>
+       
+      </div>
+  </main>
+<%- include('partials/whatsapp_aside.ejs') %>
+<%- include('partials/scripts.ejs') %>
+<%- include('partials/footer.ejs') %>
+

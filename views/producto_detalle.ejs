@@ -1,0 +1,19 @@
+<%- include('partials/header.ejs') %>.
+<%- include('partials/navbar.ejs') %>
+
+<header>
+    <h1 class="home-title">Nuestros Productos!</h1>
+</header>
+<main id="detalle-producto">
+    <section>
+        <h2><%= producto.producto %></h2>
+        <img src=<%= producto.imagen %> alt=<%= producto.producto %> height="200" width="200">
+        <p><%= producto.descripcion %></p>
+        <p><%= producto.precio %></p>
+        <button>Agregar al carrito</button>
+    </section>
+</main>
+<%- include('partials/whatsapp_aside.ejs') %>
+<%- include('partials/scripts.ejs') %>
+<%- include('partials/footer.ejs') %>
+

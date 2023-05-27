@@ -1,0 +1,67 @@
+.about-us {
+   margin: 2rem;
+   padding:2rem;
+   border: 1px solid $color-5;
+   border-radius: 5px;
+   color: $color-5;
+
+    &__header {
+        padding: 1rem;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 0.5fr 1.5fr;
+        
+        &__title {
+            display: flex;
+            flex-direction: column;
+            color: $color-2;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        &__image {
+
+            width: 100%;
+            border-radius: 0.5rem;
+        }
+    }
+    &__container {
+        padding: 1rem;
+        &__title {
+            color: $color-3;
+            font-size: 1.5rem;
+        }
+
+    }
+
+    article {
+        h3 {
+            color: $color-3;
+            font-size: 1.7rem;
+        }
+        p {
+            font-size: 1.1rem;
+        }
+    }
+    
+    ul {
+        list-style: square;
+    }
+
+    @media screen and (max-width: 768px) {
+        text-align: center;
+        .about-us {
+            &__header {
+                grid-template-columns: 1fr;
+                &__image {
+                    border-radius: 100%;
+                }
+            }
+
+
+            &__separator {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<li style="display: flex; ">
+    <div style="border: 1px solid black; min-width: 200px; border-radius: 5px; margin: 8px; padding: 4px;">
+        <button onclick="eliminarOrden('<%= orden.product._id %>')">X</button>
+        <p><%= orden.product.producto %></p>
+        <p>$<%= orden.product.precio %></p>
+        <img src=/<%= orden.product.imagen %> alt=<%= orden.product.producto %> height=100 width=100>
+        <div style="display: flex; align-items: center; justify-content: center;">
+            <button onclick="modificarCantidadDeOrdenEn('<%= orden.product._id %>', -1)">-</button>
+            <p>cantidad: <%= orden.quantity %></p>
+            <button onclick="modificarCantidadDeOrdenEn('<%= orden.product._id %>', 1)">+</button>
+        </div>
+    </div>
+</li>

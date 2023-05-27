@@ -1,0 +1,24 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/navbar.ejs') %>
+
+<header>
+    <h1 class="home-title">Nuestros Productos!</h1>
+    <form class="product-search" id="filtro-productos" action="/">
+        <label for="consulta" class="product-search__label">Encuentra lo que necesitas!</label>
+        <input type="text" class="product-search__input" name="consulta">
+        <input type="submit" class="product-search__btn" value="Buscar">
+    </form>
+</header>
+
+<main>
+    <p id="productos-encontrados"></p>
+    <section class="section-cards" id="lista-productos">
+        <% products.forEach((producto) => { %>
+            <%- include('partials/card_product.ejs', {producto}) %>
+         <% }); %> 
+    </section>
+</main>
+<%- include('partials/whatsapp_aside.ejs') %>
+<%- include('partials/scripts.ejs') %>
+<%- include('partials/footer.ejs') %>
+

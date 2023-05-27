@@ -1,0 +1,74 @@
+<%- include('../partials/header.ejs') %> 
+<%- include('../partials/navbar.ejs') %>
+
+<header>
+  <h1 class="home-title">Nuestros Productos!</h1>
+  <button onclick="agregarProducto()">Agregar</button>
+</header>
+<!-- TODO: Implementar carousel en 2do módulo -->
+<main>
+  <div id="contenedor-form">
+    <form
+    class="formulario"
+    id="formulario-editar"
+    onsubmit="guardarProducto(event)"
+    enctype="multipart/form-data"
+  >
+    <input type="hidden" id="id" name="id" />
+    <label class="formulario-label" for="producto">Producto</label>
+    <input
+      class="formulario-input"
+      type="text"
+      id="producto"
+      name="producto"
+      placeholder="Ingrese el nombre del producto"
+    />
+    <label class="formulario-label" for="precio">Precio</label>
+    <input
+      class="formulario-input"
+      type="number"
+      id="precio"
+      name="precio"
+      placeholder="Ingrese el precio del producto"
+    />
+    <label class="formulario-label" for="imagen">Imagen</label>
+    <input
+      class="formulario-input"
+      type="file"
+      id="imagen-form"
+      name="imagen"
+    />
+    <label class="formulario-label" for="descripcion">Descripcion</label>
+    <textarea
+      class="formulario-input"
+      type="text"
+      id="descripcion"
+      name="descripcion"
+      placeholder="Ingrese la descripcion del producto"
+    ></textarea>
+    <button type="submit" class="formulario-submit">Guardar</button>
+  </form>
+  <button onclick="ocultarFormulario()">Ocultar</button>
+  </div>
+  
+
+  <table class="data__table">
+    <thead class="data__table-header">
+      <tr>
+        <th>Nombre</th>
+        <th>imagen</th>
+        <th>precio</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="contenido-tabla-productos" class="data__table-body">
+      <% products.forEach((producto) => { %>
+        <%- include('../partials/row_product.ejs', {producto}) %>
+     <% }); %> 
+    </tbody>
+  </table>
+</main>
+
+<%- include('../partials/scripts.ejs') %>
+<script src="/js/admin-productos.js"></script>
+<%- include('../partials/footer.ejs') %>

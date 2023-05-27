@@ -1,0 +1,44 @@
+
+    .btn {
+        border: none;
+        background-color: #9e9b9b;
+        cursor: pointer;
+        border-radius: 5px;
+        color: $color-5;
+        margin: 0.25rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+        font-weight: bold;
+    
+        &:hover {
+            background-color: #c5c4c4;
+            transform: scale(110%);
+    
+        }
+        
+        &-primary {
+            background-color: $color-bg-primary;
+            color: $color-5;
+        
+            &:hover {
+                background-color: $color-bg-primary;
+                color: $color-2;
+        
+            }
+        }
+
+        &-secondary {
+            background-color: $color-bg-secondary;
+            color: $color-1;
+        
+            &:hover {
+                background-color: $color-bg-secondary;
+                color: $color-1;
+        
+            }
+        }
+    
+    }
+
+
+

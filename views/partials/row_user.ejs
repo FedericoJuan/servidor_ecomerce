@@ -1,0 +1,13 @@
+<tr class="data__table-body-row">
+    <td "data__table-body-row-item"><%= usuario.username %></td>
+    <td "data__table-body-row-item"><%= usuario.email %></td>
+    <td "data__table-body-row-item"><%= usuario.role %></td>
+    <td class="data__table-body-row-menu">
+        <button onclick="editarUsuario('<%= usuario._id %>')"> 
+        <i class="fa-solid fa-edit"></i>
+        </button>    
+        <button onclick="eliminarUsuario('<%= usuario._id %>')"> 
+        <i class="fa-solid fa-trash"></i>
+        </button>
+    </td>
+</tr>

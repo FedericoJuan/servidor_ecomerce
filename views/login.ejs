@@ -1,0 +1,26 @@
+<%- include('partials/header.ejs') %>.
+<%- include('partials/navbar.ejs') %>
+
+<main>
+    <header class="header">
+        <h1 class="header__title">Logueate</h1>
+    </header>
+    <form class="register" id="formulario-login" onsubmit="login(event)">
+       
+        <div class="register__item-form">
+            <label for="email">email</label>
+            <input type="email" name="email">
+        </div>
+
+        <div class="register__item-form">
+            <label for="password">password</label>
+            <input type="password" name="password">
+        </div>
+
+        <button class="register__submit" type="submit">Login!</button>
+    </form>
+
+</main>
+<%- include('partials/scripts.ejs') %>
+<%- include('partials/footer.ejs') %>
+

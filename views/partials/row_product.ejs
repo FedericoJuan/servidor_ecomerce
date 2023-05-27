@@ -1,0 +1,15 @@
+<tr class="data__table-row">
+    <td class="data__table-body-row-item"><%= producto.producto %></td>
+    <td class="data__table-body-row-item">
+        <img src=/<%= producto.imagen %> alt=<%= producto.producto %> height="50" width="50">
+    </td>
+    <td class="data__table-body-row-item">$<%= producto.precio %></td>
+    <td class="data__table-body-row-menu">
+        <button onclick="editarProducto('<%= producto._id %>')"> 
+        <i class="fa-solid fa-edit"></i>
+        </button>
+        <button onclick="eliminarProducto('<%= producto._id %>')"> 
+        <i class="fa-solid fa-trash"></i>
+        </button>
+    </td>
+</tr>

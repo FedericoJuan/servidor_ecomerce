@@ -1,0 +1,53 @@
+<%- include('../partials/header.ejs') %>.
+<%- include('../partials/navbar.ejs') %>
+
+<header>
+    <h1 class="home-title">Administrador de usuarios 👨‍👨‍👧‍👦</h1>
+    <button onclick="agregarUsuario()">Agregar</button>
+</header>
+<main>
+    <div id="contenedor-formulario">
+        <form class="formulario" onsubmit="guardarUsuario(event)">
+            <input type="hidden" name="id" id="id">
+            <label class="formulario-label" for="username">Nombre</label>
+            <input class="formulario-input" type="text" id="username" name="username" placeholder="Nombre">
+            
+            <label class="formulario-label" for="email">Email</label>
+            <input class="formulario-input" type="email" id="email" name="email" placeholder="name@host.domain">
+            
+            <label class="formulario-label" for="password">Password</label>
+            <input class="formulario-input" type="text" id="password" name="password" placeholder="password">
+            
+            <label for="role">Rol</label>
+            <select name="role" id="role">
+                <option value="user">Usuario</option>
+                <option value="admin">Administrador</option>
+            </select>
+
+            <button type="submit" class="formulario-submit">Modificar</button>
+        </form>
+        <button onclick="ocultarFormulario()">Ocultar</button>
+    </div>
+   <!-- a table this got nombre email rol and actios columns -->
+    <table class="data__table">
+        <thead class="data__table-header">
+            <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Rol</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody class="data__table-body">
+            <% users.forEach((usuario) => { %>
+                <%- include('../partials/row_user.ejs', {usuario}) %>
+             <% }); %>
+        </tbody>
+    </table>
+
+</main>
+
+<%- include('../partials/scripts.ejs') %>
+<script src="/js/admin-usuarios.js"></script>
+<%- include('../partials/footer.ejs') %>
+

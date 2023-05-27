@@ -1,0 +1,42 @@
+<nav class="navbar">
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="navbar__label-toggle"><i class="fa-solid fa-bars"></i></label>
+    <a href="/index.html" class="navbar__nav-link">
+        <img class="navbar__logo" src="/assets/images/logo.png" alt="Logo del ecommerce" width="50" height="50">
+    </a>
+    <ul class="navbar__nav-links-container">
+        <li class="navbar__nav-item">
+            <a href="/" class="navbar__nav-link">Inicio</a>
+        </li>
+        <li class="navbar__nav-item">
+            <a href="/contact" class="navbar__nav-link">Contacto</a>
+        </li>
+        <li class="navbar__nav-item">
+            <a href="/about-us" class="navbar__nav-link">Nosotros</a>
+        </li>    
+    </ul>
+
+    <ul class="navbar__nav-links-container" id="rutas-admin">
+        <li class="navbar__nav-item">
+            <a href="/admin/users" class="navbar__nav-link">Usuarios</a>
+        </li>
+        <li class="navbar__nav-item">
+            <a href="/admin/products" class="navbar__nav-link">Productos</a>
+        </li>
+    </ul>
+
+    <nav class="navbar__user-menu" id="contenedor-autenticacion-login">
+        <a href="/user/login" class="nav__user-contaier">Login</a>
+        <a href="/user/register" class="nav__user-contaier">Registro</a>
+    </nav>
+    <nav class="navbar__user-menu" id="contenedor-autenticacion-usuario">
+        <a class="navbar__user-menu-cart" id="cart-link"><i class="fa-solid fa-cart-shopping"></i><span id="indicador-carrito"></span></a>
+        <a class="navbar__user-container" href="#">
+            <figure class="navbar__user-container.icon">
+                <i class="fa-solid fa-user"></i>
+            </figure>
+            <p id="nav-usuario"></p>
+        </a>
+        <button class="navbar__user-menu-logout" onclick="logout()">Logout</button>
+    </nav>
+</nav>

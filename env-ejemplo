@@ -1,0 +1,4 @@
+PORT=4040
+JWT_SECRET_KEY='i have a one bad habit i love rock and roll'
+SALT=10
+MONGO_URL=URLMONGO

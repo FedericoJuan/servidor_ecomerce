@@ -1,0 +1,26 @@
+<%- include('partials/header.ejs') %>.
+<%- include('partials/navbar.ejs') %>
+
+<header>
+    <h1 class="home-title">Carrito de Compras</h1>
+</header>
+<main>
+    <section id="lista-productos-carrito">
+        <header>
+            <h2>Tus productos</h2>
+            <p>Todos los productos estan listo para la compra</p>
+        </header>
+        <ul id="lista-ordenes">
+            <% orders.forEach((orden) => { %>
+                <%- include('partials/card_order.ejs', {orden}) %>
+             <% }); %>
+        </ul>
+        <h3>Total $<span><%= total %></span></h3>
+    </section>
+</main>
+
+<%- include('partials/whatsapp_aside.ejs') %>
+<%- include('partials/scripts.ejs') %>
+<%- include('partials/footer.ejs') %>
+
+

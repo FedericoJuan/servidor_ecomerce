@@ -1,0 +1,34 @@
+<%- include('partials/header.ejs') %>.
+<%- include('partials/navbar.ejs') %>
+<main>
+    <header class="header">
+        <h1 class="header__title">Registrarse</h1>
+    </header>
+    <form class="register" id="formulario-registro" onsubmit="agregarUsuario(event)">
+        <div class="register__item-form">
+            <label>nombre de usuario</label>
+            <input type="text" name="nombre">
+        </div>
+
+        <div class="register__item-form">
+            <label>email</label>
+            <input type="email" name="email">
+        </div>
+
+        <div class="register__item-form">
+            <label>password</label>
+            <input type="password" name="password">
+        </div>
+
+        <div class="register__item-form">
+            <label>confirmar password</label>
+            <input type="password" name="password2">
+        </div>
+
+        <button class="register__submit" type="submit">Registrarse!</button>
+    </form>
+
+</main>
+<%- include('partials/scripts.ejs') %>
+<%- include('partials/footer.ejs') %>
+

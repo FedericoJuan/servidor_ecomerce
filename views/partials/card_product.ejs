@@ -1,0 +1,27 @@
+<article class="card">
+    <header class="card__header">
+
+        <h3 class="card__title">
+            <%= producto.producto %>
+        </h3>
+        <p class="card__subtitle">
+            <%= producto.descripcion %>
+        </p>
+    </header>
+    <figure class="card__body">
+        <img src=<%= producto.imagen %> alt=<%= producto.producto %> class="card__img" height="200" width="200">
+        <div class="card__price">
+            <p><span>$</span><%= producto.precio %></p>
+        </div>
+    </figure>
+    <footer class="card__footer">
+        <hr>
+        <nav class="card__btn-container">
+            <a class="btn btn-primary" href=/detalle/<%= producto._id %>>
+                Detalle
+            </a>
+            <button class="btn btn-secondary" onclick="agregarAlCarrito('<%= producto._id %>')" >Agregar al carrito!</button>
+        </nav>
+    </footer>
+    </div>
+</article>
