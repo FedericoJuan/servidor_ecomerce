@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const stringConnection = process.env.MONGO_URL
+const stringConnection = "mongodb+srv://Federico:UdCAJW2Ph4RBNejF@cluster0.bm3n3fj.mongodb.net/?retryWrites=true&w=majority"
 
 
 async function connectDatabase() {
