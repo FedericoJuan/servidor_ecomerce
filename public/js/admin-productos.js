@@ -71,7 +71,7 @@ function guardarProducto(event) {
     .then(json => {
         
         window.location.reload();
-        console.log(json);
+        
     })
     .catch(error => {
         swal({
