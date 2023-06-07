@@ -59,7 +59,6 @@ function guardarProducto(event) {
     data.append('descripcion', producto.descripcion);
     data.append('precio', producto.precio);
 
-
     fetch(url, {
         method: elements.id.value !== '' ? 'PUT' : 'POST',
         body: data,
@@ -69,9 +68,7 @@ function guardarProducto(event) {
     })
     .then(res => res.json())
     .then(json => {
-        
         window.location.reload();
-        
     })
     .catch(error => {
         swal({
@@ -79,6 +76,8 @@ function guardarProducto(event) {
             text: error.message,
         })
     })
+   
+      
 }
 function eliminarProducto(index) {
     const response = confirm('Esta seguro que desea eliminar el producto?')
