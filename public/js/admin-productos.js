@@ -76,8 +76,6 @@ function guardarProducto(event) {
             text: error.message,
         })
     })
-   
-      
 }
 function eliminarProducto(index) {
     const response = confirm('Esta seguro que desea eliminar el producto?')
